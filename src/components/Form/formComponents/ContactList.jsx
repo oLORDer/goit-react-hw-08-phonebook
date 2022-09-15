@@ -31,10 +31,10 @@ export default function ContactList() {
       <h2>Contacts</h2>
       <ul>
         {!loading &&
-          filteredContacts?.map(({ id, name, phone }) => {
+          filteredContacts?.map(({ id, name, number }) => {
             return (
               <li key={nanoid()} id={id} className={s.item}>
-                <div>{`${name}: ${phone}`}</div>
+                <div>{`${name}: ${number}`}</div>
                 <button
                   className={s.deleteBtn}
                   type="button"
