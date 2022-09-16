@@ -1,14 +1,11 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { Navigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 import { login } from 'redux/auth/auth-operations';
-import { isLogin } from 'redux/auth/auth-selectors';
 
 import s from '../RegisterPage/RegisterPage.module.scss';
 
 const LoginPage = () => {
   const dispatch = useDispatch();
-  const isUserLogin = useSelector(isLogin);
 
   const onLogin = (e) => {
     e.preventDefault();
@@ -18,10 +15,6 @@ const LoginPage = () => {
     }
 
     dispatch(login(data));
-  }
-  
-  if(isUserLogin) {
-    return <Navigate to='/my-contacts'/>
   }
   
   return (
