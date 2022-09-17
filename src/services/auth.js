@@ -26,7 +26,6 @@ export const getCurrent = async token => {
   try {
     instance.defaults.headers.authorization = `Bearer ${token}`;
     const { data: result } = await instance.get('/users/current');
-    instance.defaults.headers.authorization = '';
     return result;
   } catch (error) {
     instance.defaults.headers.authorization = `Bearer ${null}`;
