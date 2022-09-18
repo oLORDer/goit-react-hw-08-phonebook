@@ -49,7 +49,7 @@ const RegisterPage = () => {
             required
           />
         </label>
-        <button type="submit">Register</button>
+        <button type="submit" className={s.btnGlow}>Register</button>
       </form>
     </>
   );

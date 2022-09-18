@@ -15,7 +15,7 @@ export default function ContactList() {
   const filteredContacts = currentContacts?.filter(
     el =>
       el.name.toLowerCase().includes(filterWord.toLowerCase()) ||
-      el.phone.includes(filterWord)
+      el.number.includes(filterWord.toLowerCase())
   );
 
   useEffect(() => {

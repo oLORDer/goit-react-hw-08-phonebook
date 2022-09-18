@@ -39,7 +39,7 @@ const LoginPage = () => {
             required
           />
         </label>
-        <button type="submit">Login</button>
+        <button type="submit" className={s.btnGlow}>Login</button>
       </form>
     </>
   );

@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { addContacts } from 'redux/contacts-operations';
 
 import s from './form.module.scss';
+import st from 'pages/RegisterPage/RegisterPage.module.scss';
 
 export default function Form() {
   const dispatch = useDispatch();
@@ -59,7 +60,7 @@ export default function Form() {
           required
         ></input>
       </label>
-      <button type="submit">Add contact</button>
+      <button type="submit" className={st.btnGlow}>Add contact</button>
     </form>
   );
 }
